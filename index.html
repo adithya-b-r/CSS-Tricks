@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide/Display using CSS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 20px;
+      width: 40%;
+      height: 40vh;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      border: 2px solid royalblue;
+      text-align: center;
+    }
+
+    label {
+      padding: 10px 20px;
+      background-color: #007B83;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    label:hover {
+      background-color: #005f63;
+    }
+
+    .textToggle {
+      display: none;
+      color: #333;
+      font-size: 1.2rem;
+    }
+
+    #toggle:checked ~ .textToggle {
+      display: block;
+    }
+
+    #toggle {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <label for="toggle">Show/Hide Text</label>
+    <input type="checkbox" id="toggle">
+    <h3 class="textToggle">This text is being toggled using CSS.</h3>
+  </div>
+</body>
+
+</html>
